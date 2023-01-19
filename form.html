@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title>
+            form validation
+        </title>
+        <style>
+            body {
+                 width:800px;
+                 margin-top: 50px;
+                 margin-left: ;
+            }
+            #formating{
+                background-color: lightblue;
+                padding: 50px; 
+                text-align: center;
+                border-radius: 15px;
+                
+            }
+            h2{
+                margin-bottom: 10px;
+
+            }
+            input{
+                width: 250px;
+                margin: 10px 0px;
+                padding: 10px;
+                border-radius: 25px;              
+            }
+            
+            input[type = "submit"]{
+                width: 150px;
+                background-color: black;
+                color: aliceblue;
+                border: 5px solid yellowgreen;
+                border-radius: 25px;
+            }
+            input[type = "submit"]:hover{
+                width: 150px;
+                background-color: yellowgreen;
+                color: aliceblue;
+                border: 5px solid rgb(14, 14, 14);
+                border-radius: 25px;
+            }
+            .error{
+                color: red;
+                margin: 0px;
+                text-align: left;
+            }
+            a{
+                margin-right: 180px;
+                margin-top: 40px;
+                text-align: left;
+                text-decoration: none;
+                color: blue;
+                
+            }
+        </style>
+       
+    </head>
+    <body>
+        <div id = "formating">
+            <h2>login page</h2>
+            <form action = "" onsubmit = "return validateFrom()">
+                    <input type = "text" placeholder = "your name" id = "username"><br><br>
+                    <p id = "usererror" class = "error"> </p>
+                    <input type = "password" placeholder = "password" id = "password"><br><br>
+                    <a href = "full_reg.html">create account</a>
+                    <p id = "passerror"  class = "error"> </p>
+                    <input type = "submit"><br><br>
+            </form>
+        </div>
+        <script>
+            let username = document.getElementById("username");
+            let password = document.getElementById("password");
+            let flag = 1
+            function validateFrom(){
+                if(username.value == ""){
+                            document.getElementById("usererror").innerHTML = "user name is empty";
+                            flag = 0;
+                }
+                else if(username.value.length > 9){
+                            document.getElementById("usererror").innerHTML = "user name 9 char";
+                            flag = 0;
+                }
+                else{
+                    document.getElementById("usererror").innerHTML = "";
+                    flag = 1;
+                
+                }
+                if(password.value == ""){
+                            document.getElementById("passerror").innerHTML = "please provide password";
+                            flag = 0;
+                }
+                else{
+                    document.getElementById("passerror").innerHTML = "";
+                    flag = 1;
+                
+                }
+                 if (flag){
+                         return true;
+                 }
+                 else 
+                         return false;
+
+            }
+            
+        </script>
+    </body>
+</html>

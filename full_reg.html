@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> full_reg </title>
+<link rel="stylesheet" href="form_style.css">
+</head>
+<body>
+<div class="main">
+<div class="register">
+	<h2>registration page</h2>
+  <form action="admission_enquiry.php" method="post">
+  
+        <label for="fname">First Name</label>
+      <br>
+        <input type="text" id="firstname" name="first_name" placeholder="Your name..">
+      <br><br>
+        <label for="lname">Last Name</label>
+      <br>
+       <input type="text" id="lastname" name="last_name" placeholder="Your last name..">
+      <br><br>
+      <label for="email">E-mail</label>
+      <br>
+        <input type="text" id="email" name="email" placeholder="Your E-mail Id..">
+      <br><br>
+        <label for="contact">password</label>
+      <br><br>
+        <input type="number" id="password" name="password" placeholder="Enter Password..">
+      <br><br>
+        <label for="contact">confirm password</label>
+      <br>
+        <input type="number" id="confirm password" name="confirm password" placeholder="Re-Enter Password..">
+      <br><br>
+        <label for="state">Select state</label>
+      <br>
+        <select id="state" name="state">
+		  <option value="None">select</option>
+          <option value="B-tech">delhi</option>
+         <option value="BCA">bhuneshwar</option>
+		  <option value="B.Sc_IT">mumbai</option>
+		  <option value="MCA">chandigarh</option>
+		  <option value="M-tech">jammu</option>
+        </select>
+      <br><br>
+        <label for="location">Location</label>
+      <br>
+        <input type="text" id="location" name="location" placeholder="Your Location..">
+      <br><br>
+        <label for="message">Message</label>
+      <br>
+       <input type="text" id="message" name="message" placeholder="write something..">
+      <br><br> 
+      <input type="submit" value="Submit" name="submit" id="submit">
+    
+  </form>
+</div>
+</div>
+
+</body>
+</html>
